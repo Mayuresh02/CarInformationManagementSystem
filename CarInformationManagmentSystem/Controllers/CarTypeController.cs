@@ -12,7 +12,6 @@ public class CarTypeController : Controller
         _carTypeRepository = carTypeRepository;
     }
 
-
     // GET: CarType/Create
     public IActionResult Create()
     {
@@ -22,12 +21,12 @@ public class CarTypeController : Controller
     // POST: CarType/Create
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Type")] CarType carType)
+    public async Task<IActionResult> Create([Bind("Type", "ContactPerson")] CarType carType)
     {
         if (ModelState.IsValid)
         {
             await _carTypeRepository.AddAsync(carType);
-            return RedirectToAction("Index","Car");
+            return RedirectToAction("Index", "Car");
         }
         return View(carType);
     }

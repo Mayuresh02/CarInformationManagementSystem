@@ -22,8 +22,7 @@ namespace CarInformationManagmentSystem.Repositories
 
         public async Task<CarType> GetByIdAsync(int id)
         {
-            return await _context.CarTypes
-                .FirstOrDefaultAsync(t => t.Id == id);
+            return await _context.CarTypes.FirstOrDefaultAsync(t => t.Id == id);
         }
 
         [Authorize(Policy = "AdminOnly")]

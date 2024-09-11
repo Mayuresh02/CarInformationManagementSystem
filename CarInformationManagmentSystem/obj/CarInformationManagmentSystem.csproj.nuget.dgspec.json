@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vgajivel\\source\\repos\\csharptutorials\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\CarInformationManagmentSystem.csproj": {}
+    "C:\\Users\\mahivare\\Downloads\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\CarInformationManagmentSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vgajivel\\source\\repos\\csharptutorials\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\CarInformationManagmentSystem.csproj": {
+    "C:\\Users\\mahivare\\Downloads\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\CarInformationManagmentSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vgajivel\\source\\repos\\csharptutorials\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\CarInformationManagmentSystem.csproj",
+        "projectUniqueName": "C:\\Users\\mahivare\\Downloads\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\CarInformationManagmentSystem.csproj",
         "projectName": "CarInformationManagmentSystem",
-        "projectPath": "C:\\Users\\vgajivel\\source\\repos\\csharptutorials\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\CarInformationManagmentSystem.csproj",
-        "packagesPath": "C:\\Users\\vgajivel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vgajivel\\source\\repos\\csharptutorials\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\obj\\",
+        "projectPath": "C:\\Users\\mahivare\\Downloads\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\CarInformationManagmentSystem.csproj",
+        "packagesPath": "C:\\Users\\mahivare\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mahivare\\Downloads\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\vgajivel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mahivare\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
