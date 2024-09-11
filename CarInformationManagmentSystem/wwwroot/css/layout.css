@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('https://your-image-url.jpg'); /* Replace with actual image URL */
+    background-image: url('Images/CarImage.gif'); /* Replace with actual image URL */
     background-size: cover;
     background-position: center;
     min-height: 100vh; /* Ensure the body covers the full viewport height */
@@ -13,19 +13,32 @@ body {
 /* Homepage Styles */
 .home-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Ensure the container covers the full viewport height */
     text-align: center;
     padding: 2rem;
-    color: #ffffff;
 }
 
-.home-content {
-    max-width: 800px;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+.home-content2 {
+    max-width: 100%;
+    /*background-color: rgba(0, 0, 0, 0.6);*/ /* Semi-transparent background for readability */
     padding: 2rem;
     border-radius: 8px;
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.home-content2 h3
+{
+    text-align: center;
 }
 
 /* Navbar Styles */
@@ -52,7 +65,7 @@ body {
 }
 
     .navbar-nav .nav-link {
-        color: #61dafb;
+        color: #00ccff;
         font-weight: bold;
         padding: 0 15px;
         margin: auto; /* Remove margin from individual nav links */
@@ -81,8 +94,8 @@ body {
 
         .navbar-actions a.active {
             background-color: #ffffff;
-            color: #007bff;
-            border-color: #007bff;
+            color: #00ccff;
+            border-color: #00ccff;
         }
 
         .navbar-actions a:hover {
@@ -94,16 +107,18 @@ body {
 /* Login Page Styles */
 .login-container {
     max-width: 400px;
+    min-height: 500px;
     margin: 3rem auto;
     padding: 1 rem 2rem;
-    background-color: #ffffff;
+/*    background-color: #0009;*/
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .login-header {
-    background-color: #007bff;
-    color: white;
+/*    background-color: #00ccff;*/
+    color: black;
+    font-style: bold;
     padding: 1rem;
     border-radius: 8px 8px 0 0;
     text-align: center;
@@ -289,7 +304,8 @@ body {
 /* Content Wrapper */
 .content-wrapper {
     padding: 20px;
-    background-color: #36383f;
+    background-color: #0009;
+    margin-top: 40px;
      /* Light background color for the main content area */
 }
 

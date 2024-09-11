@@ -8,8 +8,16 @@
     <link rel="stylesheet" href="~/css/layout.css" />
 }
 
+<style>
+    .form-group
+    {
+        margin: 10px;
+        width: 30rem;
+    }
+</style>
+
 <div class="edit-car-container">
-    <h2>Create Car</h2>
+    <h2 style="margin-top: 20px;">Create Car</h2>
 
     <form asp-action="Create" method="post" class="edit-car-form">
         <input type="hidden" asp-for="Id" /> <!-- Hidden field for car ID -->

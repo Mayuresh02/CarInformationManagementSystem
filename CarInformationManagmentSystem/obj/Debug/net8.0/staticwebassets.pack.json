@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\CarInformationManagmentSystem.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\mahivare\\Downloads\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\wwwroot\\css\\Images\\CarImage.gif",
+      "PackagePath": "staticwebassets\\css\\Images\\CarImage.gif"
+    },
+    {
       "Id": "C:\\Users\\mahivare\\Downloads\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\wwwroot\\css\\layout.css",
       "PackagePath": "staticwebassets\\css\\layout.css"
     },

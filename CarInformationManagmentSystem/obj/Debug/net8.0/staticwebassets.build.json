@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rIvUB4I5unBEqg6nPjVUBDq4Y1USZ10gZ2TxsgmUL7k=",
+  "Hash": "GP+tx9arazLMXN5/U15PkeLITgLQ4h8Vncj3LYqHYk0=",
   "Source": "CarInformationManagmentSystem",
   "BasePath": "_content/CarInformationManagmentSystem",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mahivare\\Downloads\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CarInformationManagmentSystem.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\mahivare\\Downloads\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\wwwroot\\css\\Images\\CarImage.gif",
+      "SourceId": "CarInformationManagmentSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahivare\\Downloads\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\wwwroot\\",
+      "BasePath": "_content/CarInformationManagmentSystem",
+      "RelativePath": "css/Images/CarImage.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Images\\CarImage.gif"
     },
     {
       "Identity": "C:\\Users\\mahivare\\Downloads\\CarInformationManagmentSystem\\CarInformationManagmentSystem\\wwwroot\\css\\layout.css",

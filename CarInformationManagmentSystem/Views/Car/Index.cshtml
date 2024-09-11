@@ -57,16 +57,10 @@
                     <th>Manufacturer</th>
                     <th>Type</th>
                     <th>Transmission</th>
-                    <th>Engine</th>
-                    <th>BHP</th>
-                    <th>Mileage</th>
-                    <th>Seat</th>
-                    <th>AirBag Details</th>
-                    <th>Boot Space</th>
-                    <th>Price</th>
                     @if (User.Identity.IsAuthenticated && userRole == "Admin")
                     {
                         <th>Edit</th>
+                        <th>Details</th>
                         <th>Remove</th>
                     }
                 </tr>
@@ -81,23 +75,20 @@
                             <td class="text-center">@car.Manufacturer.Name</td>
                             <td class="text-center">@car.Type.Type</td>
                             <td class="text-center">@car.Transmission.Name</td>
-                            <td class="text-center">@car.Engine</td>
-                            <td class="text-center">@car.BHP</td>
-                            <td class="text-center">@car.Mileage</td>
-                            <td class="text-center">@car.Seat</td>
-                            <td class="text-center">@car.AirBagDetails</td>
-                            <td class="text-center">@car.BootSpace</td>
-                            <td class="text-center">@car.Price.ToString("C")</td>
+
                             @if (User.Identity.IsAuthenticated&& userRole == "Admin")
                             {
                                 <td class="text-center">
-                                    <a asp-action="Settings" asp-controller="Car" asp-route-id="@car.Id" class="btn btn-primary">Edit</a>
+                                    <a asp-action="Edit" asp-controller="Car" asp-route-id="@car.Id" class="btn btn-primary"><i class="fas fa-pencil-alt icon" title="Edit"></i></a>
+                                </td>
+                                <td class="text-center">
+                                    <a asp-action="Details" asp-controller="Car" asp-route-id="@car.Model" class="btn" style="background: green;color: white;"><i class="fas fa-info-circle icon" title="Details"></i></a>
+                                        @Html.AntiForgeryToken()
                                 </td>
                                 <td class="text-center">
                                     <form asp-action="Delete" method="post" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this car?');">
                                         <input type="hidden" name="model" value="@car.Model" />
-                                        <button type="submit" class="btn btn-danger">Delete</button>
-                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash icon" title="Delete"></i></button>
                                     </form>
                                 </td>
                             }

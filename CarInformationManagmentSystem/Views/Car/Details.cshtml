@@ -1,0 +1,74 @@
+﻿@model CarInformationManagmentSystem.Models.Entities.Car
+
+<style>
+    .table-container {
+        width: 50%; /* Set table container to half page width */
+        float: left;
+        align: left;
+        box-sizing: border-box;
+        background: #0009;
+    }
+    .table-sm {
+        font-size: 0.9rem; /* Smaller font size for compact display */
+    }
+    .table-sm th, .table-sm td {
+        padding: 0.5rem; /* Reduced padding for compactness */
+    }
+</style>
+
+<div style="width: 50%; margin: auto;">
+    <h4 style="margin-top: 20px;">Car Details</h4>
+    <hr />
+    <table class="table table-sm table-bordered" style="background: rgba(54, 69, 79, 0.9);color: #fff;">
+        <tbody>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Model)</th>
+                <td>@Html.DisplayFor(model => model.Model)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Manufacturer)</th>
+                <td>@Html.DisplayFor(model => model.Manufacturer.ContactPerson)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Type)</th>
+                <td>@Html.DisplayFor(model => model.Type.Type)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Engine)</th>
+                <td>@Html.DisplayFor(model => model.Engine)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.BHP)</th>
+                <td>@Html.DisplayFor(model => model.BHP)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Transmission)</th>
+                <td>@Html.DisplayFor(model => model.Transmission.Name)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Mileage)</th>
+                <td>@Html.DisplayFor(model => model.Mileage)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Seat)</th>
+                <td>@Html.DisplayFor(model => model.Seat)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.AirBagDetails)</th>
+                <td>@Html.DisplayFor(model => model.AirBagDetails)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.BootSpace)</th>
+                <td>@Html.DisplayFor(model => model.BootSpace)</td>
+            </tr>
+            <tr>
+                <th scope="row">@Html.DisplayNameFor(model => model.Price)</th>
+                <td>@Html.DisplayFor(model => model.Price)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div style="display: flex; justify-content: center;align-items: center;">
+    <a asp-action="Index" class="btn btn-secondary" style="align-items: center;">Back to List</a>
+</div>

@@ -5,6 +5,8 @@ using CarInformationManagmentSystem.Models.Entities;
 using CarInformationManagmentSystem.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using CarInformationManagmentSystem.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 public class CarController : Controller
 {
@@ -12,17 +14,19 @@ public class CarController : Controller
     private readonly ICarTypeRepository _carTypeRepository;
     private readonly ICarTransmissionTypeRepository _carTransmissionTypeRepository;
     private readonly ICarRepository _carRepository;
+    private readonly Context _context;
 
     public CarController(
         IManufacturerRepository manufacturerRepository,
         ICarTypeRepository carTypeRepository,
         ICarTransmissionTypeRepository carTransmissionTypeRepository,
-        ICarRepository carRepository)
+        ICarRepository carRepository, Context context)
     {
         _manufacturerRepository = manufacturerRepository;
         _carTypeRepository = carTypeRepository;
         _carTransmissionTypeRepository = carTransmissionTypeRepository;
         _carRepository = carRepository;
+        _context = context;
     }
 
     // GET: Car/Create
@@ -75,6 +79,24 @@ public class CarController : Controller
         return RedirectToAction("Index");
     }
 
+    // GET: Car/Details/{model}
+    [HttpGet("Car/Details/{model}")]
+    public async Task<IActionResult> Details(string model)
+    {
+        if (model == null)
+        {
+            return NotFound();
+        }
+
+        var car = await _carRepository.GetByModelAsync(model);
+        if (car == null)
+        {
+            return NotFound();
+        }
+
+        return View(car);
+    }
+
     // Index action for listing and filtering cars
     public async Task<IActionResult> Index(string model, int? manufacturerId, int? typeId, int? transmissionId)
     {
@@ -108,41 +130,62 @@ public class CarController : Controller
 
         return View(cars);
     }
-    public async Task<IActionResult> Settings(string model)
+
+    // GET: Car/Edit
+    public async Task<IActionResult> Edit(int? id)
     {
-        var car = await _carRepository.GetByModelAsync(model);
-        if (car == null)
+        if (id == null)
         {
             return NotFound();
         }
 
-        // Populate ViewBag for dropdown lists
-        ViewBag.Manufacturers = await _manufacturerRepository.GetAllAsync();
-        ViewBag.CarTypes = await _carTypeRepository.GetAllAsync();
-        ViewBag.Transmissions = await _carTransmissionTypeRepository.GetAllAsync();
-
+        var car = await _context.Cars.FindAsync(id);
+        if (car == null)
+        {
+            return NotFound();
+        }
+        ViewData["ManufacturerId"] = new SelectList(_context.Manufacturers, "Id", "ContactPerson", car.ManufacturerId);
+        ViewData["TransmissionId"] = new SelectList(_context.CarTransmissionTypes, "Id", "Name", car.TransmissionId);
+        ViewData["TypeId"] = new SelectList(_context.CarTypes, "Id", "Type", car.TypeId);
         return View(car);
     }
+    //POST: Cars/Edit
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Settings(int id, Car car)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Model,ManufacturerId,TypeId,Engine,BHP,TransmissionId,Mileage,Seat,AirBagDetails,BootSpace,Price")] Car car)
     {
         if (id != car.Id)
         {
             return NotFound();
         }
 
-        if (ModelState.IsValid)
+
+        try
         {
-            await _carRepository.UpdateAsync(car);
-            return RedirectToAction(nameof(Index));
+            _context.Update(car);
+            await _context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!CarExists(car.Id))
+            {
+                return NotFound();
+            }
+            else
+            {
+                return RedirectToAction(nameof(Index));
+            }
         }
 
-        // Repopulate ViewBag for dropdown lists in case of validation errors
-        ViewBag.Manufacturers = await _manufacturerRepository.GetAllAsync();
-        ViewBag.CarTypes = await _carTypeRepository.GetAllAsync();
-        ViewBag.Transmissions = await _carTransmissionTypeRepository.GetAllAsync();
 
+        ViewData["ManufacturerId"] = new SelectList(_context.Manufacturers, "Id", "ContactPerson", car.ManufacturerId);
+        ViewData["TransmissionId"] = new SelectList(_context.CarTransmissionTypes, "Id", "Name", car.TransmissionId);
+        ViewData["TypeId"] = new SelectList(_context.CarTypes, "Id", "Type", car.TypeId);
         return View(car);
+    }
+
+    private bool CarExists(int id)
+    {
+        return _context.Cars.Any(e => e.Id == id);
     }
 }

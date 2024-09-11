@@ -46,12 +46,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahivare/Downloads/CarInformationManagmentSystem/CarInformationManagmentSystem/Views/Car/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXEluZGV4LmNzaHRtbA==
+[C:/Users/mahivare/Downloads/CarInformationManagmentSystem/CarInformationManagmentSystem/Views/Car/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mahivare/Downloads/CarInformationManagmentSystem/CarInformationManagmentSystem/Views/Car/Settings.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXFNldHRpbmdzLmNzaHRtbA==
+[C:/Users/mahivare/Downloads/CarInformationManagmentSystem/CarInformationManagmentSystem/Views/Car/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mahivare/Downloads/CarInformationManagmentSystem/CarInformationManagmentSystem/Views/Car/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/mahivare/Downloads/CarInformationManagmentSystem/CarInformationManagmentSystem/Views/Manufacturer/Create.cshtml]
